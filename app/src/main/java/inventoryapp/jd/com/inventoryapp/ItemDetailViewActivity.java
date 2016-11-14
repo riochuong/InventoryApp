@@ -47,6 +47,8 @@ public class ItemDetailViewActivity extends AppCompatActivity
 
     private static final int BUFFER_SIZE = 1024;
 
+    private static final int IMAGE_COMPRESS_QUALTIY = 60;
+
     private static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
             + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
@@ -219,8 +221,19 @@ public class ItemDetailViewActivity extends AppCompatActivity
                 Log.d(AppConst.TAG, "Image Result get Called");
                 Uri selectedImage = data.getData();
                 InputStream iStream = getContentResolver().openInputStream(selectedImage);
+                // TODO: would be nice to have a seperate method
                 imageByteArray = getBytes(iStream);
                 Bitmap bitmapImage = BitmapFactory.decodeByteArray(imageByteArray, 0, imageByteArray.length);
+                bitmapImage  = Bitmap.createScaledBitmap(bitmapImage,
+                                        (int)getResources().getDimension(R.dimen.icon_size),
+                                        (int)getResources().getDimension(R.dimen.icon_size),
+                                        false);
+                ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+                // compress bitmap image
+                bitmapImage.compress(Bitmap.CompressFormat.JPEG,IMAGE_COMPRESS_QUALTIY,bytes);
+                imageByteArray = bytes.toByteArray();
+                // decode the compress version to set picture
+                bitmapImage = BitmapFactory.decodeByteArray(imageByteArray, 0, imageByteArray.length);
                 itemImage.setImageBitmap(bitmapImage);
                 itemImage.setVisibility(View.VISIBLE);
             } catch (IOException e) {
