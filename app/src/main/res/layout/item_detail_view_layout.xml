@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/detail_image_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <!-- Item name -->
+    <LinearLayout
+        style="@style/layout_item_prop">
+
+        <TextView
+            style="@style/layout_detail_item_prop"
+            android:text="@string/name_title_text"
+            />
+
+        <EditText
+            android:id="@+id/detail_view_title_text"
+            style="@style/text_view_detail_item_content_key_style"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_item_prop">
+
+        <TextView
+            style="@style/layout_detail_item_prop"
+            android:text="@string/price_title_text"
+            />
+
+        <EditText
+            android:id="@+id/detail_view_price_text"
+            style="@style/text_view_detail_item_content_key_style"
+            android:inputType="numberDecimal"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_item_prop">
+
+        <TextView
+            style="@style/layout_detail_item_prop"
+            android:text="@string/quantity_title_text"
+            />
+
+        <EditText
+            android:id="@+id/detail_view_quantity_text"
+            style="@style/text_view_detail_item_content_key_style"
+            android:inputType="number"
+            />
+
+        <Button
+            android:id="@+id/increase_quantity_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold|italic"/>
+
+        <Button
+            android:id="@+id/decrease_quantity_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold|italic"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_item_prop">
+
+        <TextView
+            style="@style/layout_detail_item_prop"
+            android:text="@string/supplier_title_text"
+            />
+
+        <EditText
+            android:id="@+id/detail_view_supplier_text"
+            style="@style/text_view_detail_item_content_key_style"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_item_prop"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/layout_detail_item_prop"
+            android:text="@string/supplier_contacts_title"
+            />
+
+        <EditText
+            android:id="@+id/detail_view_supplier_contacts"
+            style="@style/text_view_detail_item_content_key_style"
+            android:minLines="2"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_item_prop">
+
+        <Button
+            android:id="@+id/select_image_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selectImage"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textStyle="bold|italic"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/layout_item_prop">
+
+        <Button
+            android:id="@+id/delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_btn_text"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold|italic"/>
+
+        <Button
+            android:id="@+id/order_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_btn_text"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold|italic"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
