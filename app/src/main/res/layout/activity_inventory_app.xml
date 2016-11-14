@@ -19,6 +19,14 @@
 
     </ListView>
 
+    <TextView
+        android:id="@+id/empty_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:text="@string/emptyList" >
+    </TextView>
+
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/add_item_float_btn"

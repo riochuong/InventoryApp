@@ -40,6 +40,7 @@ public class InventoryAppActivity extends AppCompatActivity
         mListItemView.setOnItemClickListener(this);
         mCursorAdapter = new InventoryCursorAdapter(this, null);
         mListItemView.setAdapter(mCursorAdapter);
+        mListItemView.setEmptyView(findViewById(R.id.empty_list_item));
         this.getSupportLoaderManager().initLoader(DATA_LOADER, null, this);
 
     }

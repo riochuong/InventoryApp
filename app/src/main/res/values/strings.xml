@@ -26,4 +26,5 @@
     <string name="supplier_error_msg">Invalid Supplier Value</string>
     <string name="contact_info_error_msg">Contact Info is not Valid</string>
     <string name="supplier_contacts_title">Supplier Contacts (Phone or Email):</string>
+    <string name="emptyList">There is no item in the database to be displayed</string>
 </resources>
